@@ -1,8 +1,0 @@
-LICENSE.md
-README.md
-pyproject.toml
-setup.cfg
-src/nevArgs.egg-info/PKG-INFO
-src/nevArgs.egg-info/SOURCES.txt
-src/nevArgs.egg-info/dependency_links.txt
-src/nevArgs.egg-info/top_level.txt
