@@ -13,14 +13,16 @@ def dictify(s: str):
         if flag not in flags:
             flags.append(flag)
     dict = {}
-    dict["bin"] = []
+    #dict["bin"] = []
+    dict["args"] = []
     for flag in flags:
         flag_indexes =  [f"{i}" for i, x in enumerate(s) if x == flag]
         itc_ini.extend(flag_indexes)
         try:
             if (int(flag_indexes[0]) + 1) <= (len(s) - 1):
-                if s[int(flag_indexes[0]) + 1] in ["True", "False"]:
-                    dict["bin"].append(flag)
+                #if s[int(flag_indexes[0]) + 1] in ["True", "False"]:
+                #    dict["bin"].append(flag)
+                #    continue
                 dict[f"{flag}"] = []
                 for flag_index in flag_indexes:
                     dict[f"{flag}"].append(s[int(flag_index) + 1])
@@ -40,6 +42,6 @@ def dictify(s: str):
     for flag in flags:
         if flag in s:
             s[s.index(flag)] = ''
-    dict["no"] = [x for x in s if x]
+    dict["args"] = [x for x in s if x]
 
     return dict
