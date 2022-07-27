@@ -1,6 +1,16 @@
 # nevargs
 
-It's a simple package that using shlex formats your cli-like argument strings and format them into a dict
+Nevargs is a simple package that formats cli-like argument strings into a dictionary
+
+Arguments with no value are returned under `args` and for each flag found, it's arguments are under `{flag}`
+
+## Installation
+
+```bash
+python3 -m pip install nevargs
+```
+
+## Example
 
 ```py
 >>> import nevargs
@@ -8,4 +18,3 @@ It's a simple package that using shlex formats your cli-like argument strings an
 >>> nevargs.dictify(s)
 {'args': ['this', 'is', 'fun'], '-f': ['True'], '-c': ['command']}
 ```
-Arguments with no value are returned under `args` and for each flag found, it's arguments are under `{flag}`
