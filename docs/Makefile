@@ -1,6 +1,6 @@
 # Sphinx opts
 SPHINXOPTS    ?=
-SPHINXBUILD   ?= sphinx-build
+SPHINXBUILD   ?= python3 -m sphinx.cmd.build 
 SOURCEDIR     = .
 BUILDDIR      = _build
 
